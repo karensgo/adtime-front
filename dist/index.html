@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de tareas</title>
+  </head>
+  <body>
+    <div id="cointainer">
+      <nav>
+        <p>Seja Bem-vindo <span class="user-name">User</span></p>
+        <img src="/dist/img/Logo-Adtime.jpeg"  width="200" alt="ADTIME">
+      </nav>
+
+      <main>
+        <div id="folders">
+          <form id="form-folder">
+            <input
+              type="text"
+              name="folder-name"
+              id="folder-name"
+              placeholder="Nova pasta"
+            />
+            <input type="submit" value="Criar nova" />
+          </form>
+          <div class="card"></div>
+        </div>
+        <div id="tasks" class="card">
+          <form id="form-task">
+            <input
+              type="text"
+              name="task-name"
+              id="task-name"
+              placeholder="Tarefa"
+            />
+            <input type="date" name="task-date" id="task-date" />
+            <select name="task-priority" id="task-priority">
+              <option value="urgent">urgente</option>
+              <option value="normal">normal</option>
+            </select>
+            <input type="submit" value="+" />
+          </form>
+          <div id="task-container"></div>
+        </div>
+      </main>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <form id="form-task-edit">
+            <input
+              type="text"
+              name="task-name"
+              id="task-name-edit"
+              placeholder="Tarefas"
+            />
+            <input type="date" name="task-date" id="task-date-edit" />
+            <select name="task-priority" id="task-priority-edit">
+              <option value="urgent">urgente</option>
+              <option value="normal">normal</option>
+            </select>
+            <input type="submit" value="Salvar" />
+          </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
